@@ -7,8 +7,8 @@ import Layouts from "../Layouts/Layouts";
     path: "/",
     Component: Layouts,
     children:[
-        {
-            path: '/',
+        {   index: true,
+           
             Component: Home
         }
     ]
