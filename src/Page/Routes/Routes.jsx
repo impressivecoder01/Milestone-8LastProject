@@ -12,7 +12,7 @@ import WishList from "../WishList/WishList";
     errorElement: <Errorpage></Errorpage>,
     children:[
         {   index: true,
-           
+           loader: ()=> fetch(`furnitureData.json`),
             Component: Home
         },
         {
