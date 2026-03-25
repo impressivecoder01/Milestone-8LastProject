@@ -4,6 +4,7 @@ import Layouts from "../Layouts/Layouts";
 import Errorpage from "../ErrorPage/Errorpage";
 import Product from "../Product/Product";
 import WishList from "../WishList/WishList";
+import AllProducts from "../AllProducts/AllProducts";
 
  const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ import WishList from "../WishList/WishList";
         {
           path: '/products',
           Component: Product
+        },
+        {
+          path: `/allProducts`,
+          Component: AllProducts
         },
         {
           path: `/wishList`,
