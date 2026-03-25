@@ -10,6 +10,7 @@ import WishList from "../WishList/WishList";
     path: "/",
     Component: Layouts,
     errorElement: <Errorpage></Errorpage>,
+    hydrateFallbackElement: <p>Loading....</p>,
     children:[
         {   index: true,
            loader: ()=> fetch(`furnitureData.json`),
