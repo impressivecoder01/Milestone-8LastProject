@@ -1,12 +1,10 @@
 import React from 'react';
-import { Link, useLoaderData } from 'react-router';
+import { Link} from 'react-router';
 import Product from '../Product/Product';
 import useProducts from '../../Components/Hooks/useProducts';
 
 const Home = () => {
-    const products = useLoaderData()
-    const data = useProducts()
-    console.log(data)
+    const {products,error,loading} = useProducts()
     const featuredProducts = products.slice(0,6)
     // console.log(products)
     return (
@@ -19,7 +17,7 @@ const Home = () => {
             }
             
         </div>
-            </div>
+        </div>
     );
 };
 
