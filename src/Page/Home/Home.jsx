@@ -9,7 +9,7 @@ const Home = () => {
     // console.log(products)
     return (
         <div>
-            <h1 className='text-5xl'>FeaturedProducts</h1>
+            <h1 className='text-5xl'>FeaturedProducts: {products.length}</h1>
             <Link className='btn btn-outline ' to={`/allProducts`}>See All </Link>
         <div className='grid grid-cols-1 md:grid-cols-2 pt-2  lg:grid-cols-3 gap-5'>
             {
