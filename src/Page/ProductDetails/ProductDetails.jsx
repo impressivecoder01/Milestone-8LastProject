@@ -10,8 +10,15 @@ const ProductDetails = () => {
     const {name, price, category, image, description} = product || {}
     const handleAddToWishList = () => {
         const existingList = JSON.parse(localStorage.getItem('wishList'))
-        // localStorage.setItem('wishList', JSON.stringify(product))
-        console.log(existingList)
+        let updatedList = []
+        if(existingList){
+            const isDuplicate = existingList.some(p => p.id == product.id)
+            if(isDuplicate) return alert('already added')
+            updatedList = [...existingList, product]
+        }else{
+            updatedList.push(product)
+        }
+        localStorage.setItem('wishList', JSON.stringify(updatedList))
     }
     return (
         <div className="card bg-base-100 border shadow-sm">
