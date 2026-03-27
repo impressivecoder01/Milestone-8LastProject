@@ -3,7 +3,7 @@ import useProducts from '../../Components/Hooks/useProducts';
 import ShowAllProduct from './ShowAllProduct';
 
 const AllProducts = () => {
-    const { error, loading, products } = useProducts()
+    const { products } = useProducts()
     const [search , setSearch] = useState('')
     const term = search.trim().toLocaleLowerCase()
     console.log(search)
