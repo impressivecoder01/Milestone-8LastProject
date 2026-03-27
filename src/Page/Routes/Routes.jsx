@@ -5,6 +5,7 @@ import Errorpage from "../ErrorPage/Errorpage";
 import Product from "../Product/Product";
 import WishList from "../WishList/WishList";
 import AllProducts from "../AllProducts/AllProducts";
+import ProductDetails from "../ProductDetails/ProductDetails";
 
  const router = createBrowserRouter([
   {
@@ -19,7 +20,7 @@ import AllProducts from "../AllProducts/AllProducts";
         },
         {
           path: '/products',
-          Component: Product
+          element: <Product></Product>
         },
         {
           path: `/allProducts`,
@@ -28,6 +29,10 @@ import AllProducts from "../AllProducts/AllProducts";
         {
           path: `/wishList`,
           Component: WishList
+        },
+        {
+          path: `/product/:id`,
+          element: <ProductDetails></ProductDetails>
         }
     ]
   },

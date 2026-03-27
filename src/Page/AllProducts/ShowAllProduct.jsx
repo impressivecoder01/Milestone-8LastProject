@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const ShowAllProduct = ({product}) => {
     const {name, price, category, image} = product
@@ -15,10 +16,10 @@ const ShowAllProduct = ({product}) => {
     <p>{category}</p>
     <p>{price}</p>
     <div className="card-actions justify-end">
-      <button className="btn btn-primary">Buy Now</button>
+      <Link to={`/product/sss`} className='btn btn-primary'>View Details</Link>
     </div>
   </div>
-</div>
+</div>  
     );
 };
 
