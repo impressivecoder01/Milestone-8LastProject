@@ -27,7 +27,7 @@ import ProductDetails from "../ProductDetails/ProductDetails";
           Component: AllProducts
         },
         {
-          path: `/wishList`,
+          path: `/wishList/:id`,
           Component: WishList
         },
         {
