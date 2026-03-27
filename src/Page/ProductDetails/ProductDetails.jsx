@@ -8,6 +8,11 @@ const ProductDetails = () => {
     console.log( products)
     const product = products.find(p => p.id == id)
     const {name, price, category, image, description} = product || {}
+    const handleAddToWishList = () => {
+        const existingList = JSON.parse(localStorage.getItem('wishList'))
+        // localStorage.setItem('wishList', JSON.stringify(product))
+        console.log(existingList)
+    }
     return (
         <div className="card bg-base-100 border shadow-sm">
   <figure className='h-48 overflow-hidden'>
@@ -21,7 +26,7 @@ const ProductDetails = () => {
     <p>{description}</p>
     <p>{price}</p>
     <div className="card-actions justify-end">
-      <Link to={`/wishList/${id}`} className='btn btn-primary'>Add to WishList</Link>
+      <Link onClick={()=> handleAddToWishList()} to={`/wishList/${id}`} className='btn btn-primary'>Add to WishList</Link>
     </div>
   </div>
 </div>
